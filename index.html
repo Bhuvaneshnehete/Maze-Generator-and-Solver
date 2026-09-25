@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Labyrinth — Generate &amp; Solve</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="stage">
+  <header>
+    <div class="eyebrow">Generate &middot; Explore &middot; Solve</div>
+    <h1>The Labyrinth Engine</h1>
+    <div class="subtitle">A maze carved fresh each time, then walked by its own thread.</div>
+  </header>
+
+  <div class="frame">
+    <div class="board-wrap">
+      <canvas id="maze" width="640" height="640"></canvas>
+    </div>
+
+    <div class="controls">
+      <div class="group">
+        Size
+        <input type="range" id="sizeSlider" min="8" max="45" value="20">
+        <span id="sizeLabel">20 × 20</span>
+      </div>
+      <div class="group">
+        Solve speed
+        <input type="range" id="speedSlider" min="1" max="10" value="6">
+      </div>
+      <button id="generateBtn" class="primary">New Maze</button>
+      <button id="solveBtn">Solve It</button>
+    </div>
+
+    <div class="status" id="status">Carve a new labyrinth to begin.</div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
